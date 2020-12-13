@@ -24,6 +24,14 @@ const style = (theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  guestLogin: {
+    margin: theme.spacing(3, 0, 2),
+    color: "white",
+    backgroundColor: "#446fc7",
+    "&:hover": {
+      backgroundColor: "#304e8c",
+    },
+  },
   avatar: {
     margin: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main,
@@ -60,6 +68,11 @@ class Login extends Component {
       this.state.form.email.value,
       this.state.form.password.value
     );
+  };
+
+  onGuestLogin = (e) => {
+    e.preventDefault();
+    this.props.authLogin("test@test.com", "test12345");
   };
 
   render() {
@@ -114,6 +127,13 @@ class Login extends Component {
               </Grid>
             </Grid>
           </form>
+          <div>
+            <br />
+            <Typography>To Sign in as Guest</Typography>
+            <Button onClick={this.onGuestLogin} className={classes.guestLogin}>
+              GuestLogin
+            </Button>
+          </div>
         </div>
       );
     }
