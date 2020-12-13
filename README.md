@@ -1,3 +1,11 @@
+## Important 
+For testing features and logging in use:
+UserName:test@test.com
+Password:test12345
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
