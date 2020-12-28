@@ -32,9 +32,4 @@ const mapStateToProps = (state) => ({
   lists: state.lis.lists,
 });
 
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withStyles(style)(ToDoMain));
+export default connect(mapStateToProps, null)(withStyles(style)(ToDoMain));

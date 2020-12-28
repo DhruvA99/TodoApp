@@ -24,7 +24,7 @@ class toDoList extends React.Component {
         newList = (
           <div>
             <Typography gutterBottom>
-              <Box fontSize="h6.fontSize">{this.props.time}</Box>
+              <Box fontSize="h5.fontSize">{this.props.time}</Box>
             </Typography>
             {/* <TextField
               id="date"
@@ -37,6 +37,7 @@ class toDoList extends React.Component {
               }}
               onChange={this.onChangeHandler}
             /> */}
+            <br />
             {updList
               .slice(0)
               .reverse()

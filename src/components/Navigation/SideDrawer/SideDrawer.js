@@ -53,9 +53,6 @@ const sideDrawer = (props) => {
             </div>
           ) : (
             <div>
-              <ListItem className={classes.buttons} button>
-                Account
-              </ListItem>
               <ListItem
                 className={classes.buttons}
                 button

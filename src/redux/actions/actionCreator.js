@@ -22,7 +22,6 @@ export const updateItem = (token, userId) => (dispatch) => {
   axios
     .get("https://todo-list-b0f5e.firebaseio.com/lists.json" + queryParams)
     .then((res) => {
-      console.log(res.data);
       const newList = [];
       for (let key in res.data) {
         newList.push({
@@ -30,11 +29,10 @@ export const updateItem = (token, userId) => (dispatch) => {
           ...res.data[key],
         });
       }
-      console.log(newList);
+
       dispatch(addItemSuccess(newList));
     })
     .catch((err) => {
-      console.log(err);
       dispatch(addItemFail(err));
     });
 };
@@ -105,7 +103,7 @@ export const auth = (email, password) => (dispatch) => {
       "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCdhV8WffWDaeAi3mO2egvhdW4OfzsDXiU",
       data
     )
-    .then((res) => console.log(res.data))
+    .then()
     .catch((err) => console.log(err));
 };
 
@@ -122,7 +120,6 @@ export const authLogin = (email, password) => (dispatch) => {
       authData
     )
     .then((res) => {
-      console.log(res.data);
       const expDate = new Date(
         new Date().getTime() + res.data.expiresIn * 1000
       );
@@ -133,7 +130,6 @@ export const authLogin = (email, password) => (dispatch) => {
       dispatch(checkTimeOut(res.data.expiresIn));
     })
     .catch((err) => {
-      console.log(err.message);
       dispatch(authFail(err.message));
     });
 };

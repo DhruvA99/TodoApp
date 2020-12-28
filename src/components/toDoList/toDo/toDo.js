@@ -42,7 +42,6 @@ const ToDo = (props) => {
   const { classes } = props;
   return (
     <div>
-      {console.log(active)}
       <Paper className={classes.paper}>
         <Grid container>
           {" "}

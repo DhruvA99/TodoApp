@@ -90,7 +90,7 @@ class AddTodoitem extends React.Component {
               name="description"
               margin="dense"
               id="description"
-              label="Text Area"
+              label="Description"
               type="textArea"
               rows={3}
               fullWidth

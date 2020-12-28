@@ -89,7 +89,6 @@ const ToolBar = (props) => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
               <MenuItem onClick={handleLogout}>Logout</MenuItem>
             </Menu>
             <Button color="inherit" component={NavLink} to="/todo">

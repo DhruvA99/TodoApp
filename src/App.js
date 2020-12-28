@@ -12,7 +12,6 @@ import { authCheckState } from "./redux/actions/actionCreator";
 function App(props) {
   let route = null;
   useEffect(() => {
-    console.log("appjs");
     props.checkAuth();
   }, []);
   if (props.isAuthenticated) {
