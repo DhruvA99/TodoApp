@@ -1,7 +1,11 @@
+## Built with :
+- React
+- Redux
+- Material UI
+
+
 ## Important 
-For testing features and logging in use:
-UserName:test@test.com
-Password:test12345
+For testing features and logging in ,use guest Login button provided on Login Page.
 
 
 
